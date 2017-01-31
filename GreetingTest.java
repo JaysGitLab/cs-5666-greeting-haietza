@@ -7,16 +7,17 @@ import org.junit.After;
 import static org.junit.Assert.assertEquals;
 
 public class GreetingTest {
+    private PrintStream originalOut;
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
 
     @Before
     public void setUp() {
+        originalOut = System.out;
         System.setOut(new PrintStream(outContent));
     }
 
     @After
     public void tearDown() {
-        PrintStream originalOut = System.out;
         System.setOut(originalOut);
     }
     
