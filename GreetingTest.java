@@ -16,13 +16,13 @@ public class GreetingTest {
 
     @After
     public void tearDown() {
-        System.setOut(null);
+        PrintStream originalOut = System.out;
+        System.setOut(originalOut);
     }
     
     @Test
     public void testV1() {
-        Greeting greeting = new Greeting();
-        greeting.sayHello();
+        Greeting.main(null);
         assertEquals("Hello, World!\n", outContent.toString());
     }
 }
