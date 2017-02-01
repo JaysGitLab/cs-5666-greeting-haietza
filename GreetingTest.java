@@ -24,6 +24,6 @@ public class GreetingTest {
     @Test
     public void testV1() {
         Greeting.main(null);
-        assertEquals("Hello, World!\n", outContent.toString());
+        assertEquals("Hello Michelle\n", outContent.toString());
     }
 }
