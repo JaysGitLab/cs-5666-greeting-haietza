@@ -17,14 +17,17 @@ default:
 compile: Greeting.java GreetingTestNoArg.java GreetingTestArg.java
 	javac -cp .:$(JUNIT_JAR) GreetingTestNoArg.java
 	javac -cp .:$(JUNIT_JAR) GreetingTestArg.java
+	javac -cp .:$(JUNIT_JAR) GreetingTestArgLC.java
 	javac Greeting.java
 
 clean:
 	rm -f Greeting.class
 	rm -f GreetingTestNoArg.class
 	rm -f GreetingTestArg.class
+	rm -f GreetingTestArgLC.class
 
 test: Greeting.class 
 	java -cp .:$(JUNIT_JAR):$(HAMCREST_JAR) org.junit.runner.JUnitCore GreetingTestNoArg
 	java -cp .:$(JUNIT_JAR):$(HAMCREST_JAR) org.junit.runner.JUnitCore GreetingTestArg
+	java -cp .:$(JUNIT_JAR):$(HAMCREST_JAR) org.junit.runner.JUnitCore GreetingTestArgLC
 
