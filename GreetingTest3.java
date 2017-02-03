@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.After;
 import static org.junit.Assert.assertEquals;
 
-public class GreetingTestNoArg {
+public class GreetingTest3 {
     private PrintStream originalOut;
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private String[] args;
