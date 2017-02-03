@@ -15,14 +15,14 @@ default:
 	@echo "available targets: compile, test, clean"
 
 compile: Greeting.java GreetingTest3.java GreetingTest4.java GreetingTest5.java\
-  GreetingTest6a.java GreetingTest6b.java GreetingTest6c.java GreetingTest6d.java
+  GreetingTest7a.java GreetingTest7b.java GreetingTest7c.java GreetingTest7d.java
 	javac -cp .:$(JUNIT_JAR) GreetingTest3.java
 	javac -cp .:$(JUNIT_JAR) GreetingTest4.java
 	javac -cp .:$(JUNIT_JAR) GreetingTest5.java
-	javac -cp .:$(JUNIT_JAR) GreetingTest6a.java
-	javac -cp .:$(JUNIT_JAR) GreetingTest6b.java
-	javac -cp .:$(JUNIT_JAR) GreetingTest6c.java
-	javac -cp .:$(JUNIT_JAR) GreetingTest6d.java
+	javac -cp .:$(JUNIT_JAR) GreetingTest7a.java
+	javac -cp .:$(JUNIT_JAR) GreetingTest7b.java
+	javac -cp .:$(JUNIT_JAR) GreetingTest7c.java
+	javac -cp .:$(JUNIT_JAR) GreetingTest7d.java
 	javac Greeting.java
 
 clean:
@@ -30,17 +30,17 @@ clean:
 	rm -f GreetingTest3.class
 	rm -f GreetingTest4.class
 	rm -f GreetingTest5.class
-	rm -f GreetingTest6a.class
-	rm -f GreetingTest6b.class
-	rm -f GreetingTest6c.class
-	rm -f GreetingTest6d.class
+	rm -f GreetingTest7a.class
+	rm -f GreetingTest7b.class
+	rm -f GreetingTest7c.class
+	rm -f GreetingTest7d.class
 
 test: Greeting.class 
 	java -cp .:$(JUNIT_JAR):$(HAMCREST_JAR) org.junit.runner.JUnitCore GreetingTest3
 	java -cp .:$(JUNIT_JAR):$(HAMCREST_JAR) org.junit.runner.JUnitCore GreetingTest4
 	java -cp .:$(JUNIT_JAR):$(HAMCREST_JAR) org.junit.runner.JUnitCore GreetingTest5
-	java -cp .:$(JUNIT_JAR):$(HAMCREST_JAR) org.junit.runner.JUnitCore GreetingTest6a
-	java -cp .:$(JUNIT_JAR):$(HAMCREST_JAR) org.junit.runner.JUnitCore GreetingTest6b
-	java -cp .:$(JUNIT_JAR):$(HAMCREST_JAR) org.junit.runner.JUnitCore GreetingTest6c
-	java -cp .:$(JUNIT_JAR):$(HAMCREST_JAR) org.junit.runner.JUnitCore GreetingTest6d
+	java -cp .:$(JUNIT_JAR):$(HAMCREST_JAR) org.junit.runner.JUnitCore GreetingTest7a
+	java -cp .:$(JUNIT_JAR):$(HAMCREST_JAR) org.junit.runner.JUnitCore GreetingTest7b
+	java -cp .:$(JUNIT_JAR):$(HAMCREST_JAR) org.junit.runner.JUnitCore GreetingTest7c
+	java -cp .:$(JUNIT_JAR):$(HAMCREST_JAR) org.junit.runner.JUnitCore GreetingTest7d
 

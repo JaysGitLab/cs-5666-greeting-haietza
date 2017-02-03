@@ -12,7 +12,7 @@ public class Greeting {
                 computerName = args[2].substring(0, 1).toUpperCase() + args[2].substring(1, args[2].length());
                 name = args[0].substring(0, 1).toUpperCase() + args[0].substring(1, args[0].length());
             }
-            System.out.println("Hello, " + name);
+            System.out.println("Hello " + name + ". My name is " + computerName + ". How are you today, " + name + "?");
         }
         else if (args.length == 1) {
             name = args[0].substring(0, 1).toUpperCase() + args[0].substring(1, args[0].length());

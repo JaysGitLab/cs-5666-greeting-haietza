@@ -6,7 +6,7 @@ import org.junit.Before;
 import org.junit.After;
 import static org.junit.Assert.assertEquals;
 
-public class GreetingTest6c {
+public class GreetingTest7d {
     private PrintStream originalOut;
     private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
     private String[] args;
@@ -15,7 +15,7 @@ public class GreetingTest6c {
     public void setUp() {
         originalOut = System.out;
         System.setOut(new PrintStream(outContent));
-        args = new String[] { "George", "-me", "Hal" };
+        args = new String[] { "george", "-me", "Hal" };
     }
 
     @After
@@ -27,7 +27,6 @@ public class GreetingTest6c {
     @Test
     public void test() {
         Greeting.main(args);
-        assertEquals("Hello, George\n", outContent.toString());
-        assertEquals(args[2], Greeting.computerName);
+        assertEquals("Hello George. My name is Hal. How are you today, George?\n", outContent.toString());
     }
 }
